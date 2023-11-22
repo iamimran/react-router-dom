@@ -1,7 +1,13 @@
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
+import Home from "./components/Home/Home";
+
 function App() {
   return (
     <>
-      <h1 className="text-3xl text-blue-700">Welcome! to react router dom</h1>
+      <Header />
+      <Home />
+      <Footer />
     </>
   );
 }

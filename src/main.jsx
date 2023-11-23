@@ -7,8 +7,10 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import App from "./App";
+import { gitHubInfoLoader } from "./Loaders/gitHubInforLoader";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
+import Github from "./components/Github/Github";
 import Home from "./components/Home/Home";
 import User from "./components/User/User";
 import "./index.css";
@@ -42,6 +44,7 @@ const router = createBrowserRouter(
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/user/:userId" element={<User />} />
+      <Route loader={gitHubInfoLoader} path="/github" element={<Github />} />
     </Route>
   )
 );
